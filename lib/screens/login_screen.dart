@@ -71,10 +71,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Container(
                   width: 300.0,
-                  child: FlatButton(
-                      onPressed: _onSubmitLogin,
-                      color: Colors.blue[700],
-                      padding: EdgeInsets.all(12.0),
+                  child: TextButton(
+                      onPressed: () => _onSubmitLogin(),
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.blue[700],
+                          textStyle: TextStyle(color: Colors.white),
+                          padding: EdgeInsets.all(12.0)),
                       child: Text(
                         'Login',
                         style: TextStyle(fontSize: 18.0, color: Colors.white),
@@ -85,11 +87,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Container(
                   width: 300.0,
-                  child: FlatButton(
+                  child: TextButton(
                       onPressed: () =>
                           Navigator.pushNamed(context, SignUpScreen.id),
-                      color: Colors.blue[700],
-                      padding: EdgeInsets.all(12.0),
+                      style: TextButton.styleFrom(
+                          backgroundColor: Colors.blue[700],
+                          textStyle: TextStyle(color: Colors.white),
+                          padding: EdgeInsets.all(12.0)),
                       child: Text(
                         'Sign Up',
                         style: TextStyle(fontSize: 18.0, color: Colors.white),
