@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/screens/home_screen.dart';
 import 'package:instagram_clone/screens/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -14,6 +15,9 @@ class _LoginScreenState extends State<LoginScreen> {
   _onSubmitLogin() {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
+      if(_email == 'nguyendai.dev@gmail.com' && _password == '123123') {
+        Navigator.pushNamed(context, HomeScreen.id);
+      }
       print(_email);
       print(_password);
     }
